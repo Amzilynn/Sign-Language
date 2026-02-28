@@ -53,7 +53,7 @@ class DummySTGCN(nn.Module):
             x = gcn(x)
             
         # Global average pooling
-        x = F.avg_pool2d(x, x.size()[2:])
+        x = nn.AdaptiveAvgPool2d((1, 1))(x)
         x = x.view(N, -1)
         x = self.fcn(x)
         return x

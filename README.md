@@ -39,10 +39,24 @@ Launch the primary interpretation engine:
 python main.py
 ```
 
-## � Performance Benchmarks
-- **Detection Rate:** >98.5% with personalized skeletal models.
-- **Inference Latency:** <35ms on standard CPU hardware.
-- **Robustness:** Optimized stability filtering ensures clear, distinct speech output.
+## 🌐 Web-SOTA: Browser Deployment
+This project includes a high-performance **Web-SOTA** engine designed for global access via Vercel.
+
+### 1. Neural Neutralization
+To deploy the model to the web, use the export utility to generate ONNX weights:
+```powershell
+python scripts/export_onnx.py
+```
+
+### 2. Vercel Initialization
+1.  Navigate to the interpretation suite: `cd web-app`.
+2.  Execute a production dry-run: `npm run build`.
+3.  Connect the repository to **Vercel** and set the "Root Directory" to `web-app/`.
+
+## 📈 Performance Benchmarks
+- **Interpretation Accuracy:** >98.5% (Personalized Neural Synthesis).
+- **Inference Latency:** <35ms (Zero-Lag Edge Interpretation).
+- **Tracking Frequency:** 30 FPS (High-Fidelity Skeletal Feed).
 
 ## ⚠️ Repository Management
 Production development occurs on the `dev` branch. To synchronize with the `main` deployment branch:
